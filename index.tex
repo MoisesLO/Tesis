@@ -9,6 +9,8 @@
 \usepackage[spanish]{babel}
 \usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
 \begin{document}
+
+% Inicio
 \frontmatter
 \include{pages/Caratula}
 \include{pages/Jurado}
@@ -18,12 +20,15 @@
 \include{pages/IndiceFiguras}
 \include{pages/Resumen}
 \include{pages/Introduccion}
-\mainmatter
-\include{chapters/1_planteamiento_problema}
-\include{chapters/2_marco_teorico}
-\include{chapters/3_marco_metodologico}
-\include{chapters/4_resultados_discucion}
 
+% Cuerpo
+\mainmatter
+\include{chapters/CapituloUno/index}
+\include{chapters/CapituloDos/index}
+\include{chapters/CapituloTres/index}
+\include{chapters/CapituloCuatro/index}
+
+% Finales
 \backmatter
 \include{pages/Conclusiones}
 \include{pages/Recomendaciones}
