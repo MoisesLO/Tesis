@@ -1,41 +1,156 @@
 \documentclass[12pt,a4paper,openany,oneside]{book}
+\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{varioref}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{lipsum}
-\usepackage{varioref}
 \usepackage{graphicx}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
-%\setlength{\parskip}{\baselineskip}
-%\renewcommand{\baselinestretch}{1}
-%\setlength{\parindent}{10ex}
+\usepackage[T1]{polski} 
+\linespread{1.5}
 \begin{document}
-% Inicio
-\frontmatter
+%\renewcommand{\baselinestretch}{2}
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\newcommand{\nombre}{Abraham Moisés Linares Oscco} 
+\newcommand{\universidad}{UNIVERSIDAD NACIONAL JORGE BASADRE GROHMANN TACNA} 
+\newcommand{\escuela}{Escuela Profesional de Ingeniería en Informática y Sistemas} 
+\newcommand{\optar}{INGENIERO EN INFORMÁTICA Y SISTEMAS} 
+\newcommand{\facultad}{Facultad de Ingeniería} 
+\newcommand{\tesis}{IMPLEMENTACIÓN DE UN SISTEMA WEB DE FACTURACIÓN ELECTRÓNICA EN LA EMPRESA SURMOTRIZ SRL - TACNA} 
 
-\include{pages/Caratula}
-%\include{pages/Jurado}
-%\include{pages/Dedicatoria}
-%\include{pages/Agradecimientos}
-\include{pages/Contenido}
-\include{pages/IndiceTablas}
-\include{pages/IndiceFiguras}
-\include{pages/Resumen}
-\include{pages/Introduccion}
 
-% Cuerpo
-\mainmatter
-\include{chapters/unoPlateamiento/index}
-\include{chapters/dosMarcoTeorico/index}
-\include{chapters/tresMarcoMetodologico/index}
-\include{chapters/cuatroResultados/index}
+    \frontmatter    
+    \begin{titlepage}
+        \begin{center}
+            \LARGE{ \textbf{\universidad}}\\
+            \vspace{5mm}
+    
+            \large{ \textbf{\facultad}} \\
+            \vspace{5mm}
+    
+            \large{ \textbf{\escuela}}\\
+            \vspace{7mm}
+    
+            \large{}{ \textbf{\tesis}}\\
+            \vspace{8mm}
+    
+            \LARGE{ \textbf{TESIS}}\\        
+            
+            %\begin{figure*}[h]
+            %    \centering    
+            %    \includegraphics[scale=1]{images/unjbg.png}
+            %\end{figure*}
+    
+            \large{Presentada por:}\\
+            \vspace{7mm}
+    
+            \large{ Bach. \nombre} \\
+            \vspace{7mm}
+    
+            \large{ Para optar el Título Profesional de:} \\
+            \vspace{7mm}
+    
+            \large{}{ \textbf{\optar}}\\
+            \vspace{8mm}
+    
+            \large{}{ \textbf{TACNA – PERÚ}}\\
+            \vspace{5mm}
+    
+            \large{}{ \textbf{2020}}\\        
+    
+        \end{center}
+    \end{titlepage}
+    
 
-% Finales
-\backmatter
-\include{pages/Conclusiones}
-\include{pages/Recomendaciones}
-\include{pages/RefBibliograficas}
-\include{pages/Anexos}
+    \chapter*{Dedicatoria}
+    \addcontentsline{toc}{chapter}{Dedicatoria}
+    a mi familia por apoyarme y estar conmigo en los momentos más difíciles de mi vida. Y brindarme siempre su apoyo incondicional siempre.
+    
+    A mi casa de estudios por su constante apoyo y exigencia. Por sus consejos y enseñanzas, que no sólo me formaron a lo largo de mi carrera universitaria, sino que también fueron contribuyendo en mi información personal y profesional.
+
+    \chapter*{Agradecimientos}
+    \addcontentsline{toc}{chapter}{Agradecimiento}
+    Primeramente quiero agradecer a Dios por haber permitido el siguiente trabajo.
+
+    Quiero agradecer a mi familia por su apoyo incondicional en todo momento.
+
+    A mis profesores y en especial a mi asesor por haberme guiado en este camino de lograr ser, un buen profesional y además por su apoyo y consejo en todo el transcurso de mi educación universitaria. 
+
+    Y como no acordarme de mis amigos y personas conocidas que estuvieron conmigo en todo el transcurso del desarrollo de mi tesis. Que me apoyaron de alguna u otra manera con sus palabras y vivencias, dándome ánimos y alegrías en muchos momentos.
+
+    \tableofcontents
+    \addcontentsline{toc}{chapter}{Contenido}
+
+    \listoftables
+    \addcontentsline{toc}{chapter}{Índice de Tablas}
+
+    \listoffigures
+    \addcontentsline{toc}{chapter}{Índice de Figuras}
+
+    \chapter*{Resumen}
+    \addcontentsline{toc}{chapter}{Resumen}
+
+    \chapter*{Introducción}
+    \addcontentsline{toc}{chapter}{Introducción}
+    A medida que el Perú ha crecido económicamente en los últimos años, han crecido también los problemas y las responsabilidades que tiene que solucionar o que se ocasionan con la masificación de los negocios. Es por eso que la SUNAT se ve en la obligación de implementar la facturación electrónica en todo el Perú, como una forma de solucionar los problemas que surgen cuando crece la economía y las empresas.
+
+    Una de las funciones principales de la SUNAT, es la de recaudar los impuestos de un país, e implantar normas para que las empresas puedan tributar de manera correcta sus impuestos. Y en ese proceso de mejorar la recaudación de impuestos es que surge la necesidad de la facturación electrónica, como una forma de solucionar varios problemas que surgen cuando una empresa crece económicamente. Es en ese punto donde la tecnología viene a tomar un rol importante para solucionar estas carencias.
+
+    Pero así como la tecnología es importante. Las empresas tienen una misión difícil de cumplir que es la de implementar la facturación electrónica desde los sistemas del contribuyente. Esto es un reto para las empresas porque la implementación de facturación electrónica es un proceso complejo que requiere profesionales altamente calificados en el área de sistemas. 
+
+    Cabe mencionar que en el Perú más del 80\% de empresas no saben nada o no tiene idea de la implementación de factura electrónica es por eso que esta misión de la SUNAT se convierte en un reto para dicha entidad del estado y para el país entero, de cara al futuro y el progreso. 
+
+    Pero no todo es malo, se sabe que la facturación electrónica ahorra muchísimo dinero a las empresas, y esto tiene que ver con el ahorro en las impresiones de documento, en la portabilidad del documento, en el transporte de el documento y en la validación del documento. Todo esto impacta directamente en la economía de las empresas, especialmente en las micro y medianas empresas. 
+
+    La SUNAT en la medida de mejorar el servicio de recaudación de tributos al estado peruano, saca resoluciones cada año con una lista de empresas que cumplen algunos requisitos, estas empresas estarán obligadas a facturar electrónicamente a partir del vigente año. Esto lo hace la SUNAT para implementar poco a poco y progresivamente la facturación electrónica en las empresas, ya que implementar y obligar a todas las empresas a facturar electrónicamente al mismo tiempo y sin planificación sería un caos, ya que no todas las empresas están en la capacidad de poder cumplir esos requisitos.
+    Generalmente aquellas empresas que han sido seleccionadas para facturar electrónicamente, son aquellas que han superado los 50 UIT en facturación, estas empresas que manejan esa cantidad de economía supuestamente ya estarían siendo consideradas por la SUNAT para facturar electrónicamente ya que se asume que manejarían bastantes comprobantes de pago. Y al no tener registros rápidos de estos comprobantes, se genera una cadena de problemas para la SUNAT y para la empresa.
+
+    La facturación electrónica se convierte en un reto para las micro y medianas empresas, ya que con lleva a implementar un software particular con todas las especificaciones y normas que tiene la facturación electrónica en el Perú. Como es el XML que está basado en los estándares UBL internacionales, así como el PDF que viene hacer la presentación gráfica de el documento, y el CDR que viene hacer la validación del documento por parte de la SUNAT. Hablaremos más detalladamente acerca de estos últimos términos y abordaremos todo el desarrollo en los siguientes capítulos.
+
+    \mainmatter
+    \chapter{PLANTEAMIENTO DEL PROBLEMA}
+        \section{Descripción del problema}
+            \subsection{Antecedentes del problema}
+            \subsection{Problemática de la investigación}
+        \section{Formulación del problema}
+        \section{Justificación e importancia}
+        \section{Alcances y limitaciones}
+        \section{Objetivos}
+            \subsection{Objetivo General}
+            \subsection{Objetivo Específicos}
+        \section{Hipótesis}
+
+    \chapter{MARCO TEÓRICO}
+        \section{Antecedentes del estudio}
+        \section{Bases teóricas}
+        \section{Definición de términos}
+
+    \chapter{MARCO METODOLÓGICO}
+        \section{Tipo y Diseño de la investigación}
+        \section{Población y muestra}
+        \section{Operacionalización de variables}
+        \section{Técnicas e instrumentos para recolección de datos}
+        \section{Procesamiento y análisis de datos}
+
+    \chapter{RESULTADOS Y DISCUSIÓN}
+        \section{Resultados}
+        \section{Discusión}
+
+    \backmatter
+    \chapter*{Conclusiones}
+    \addcontentsline{toc}{chapter}{Conclusiones}
+
+    \chapter*{Recomendaciones}
+    \addcontentsline{toc}{chapter}{Recomendaciones}
+
+    \chapter*{Referencias Bibliográficas}
+    \addcontentsline{toc}{chapter}{Referencias Bibliográficas}
+
+    \chapter*{Anexos}
+    \addcontentsline{toc}{chapter}{Anexos}
+    
+    
 \end{document}
